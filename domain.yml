@@ -50,11 +50,10 @@ responses:
 actions: []
 forms:
   city_form:
-    required_slots:
-      city_from:
-      - entity: city
-        type: from_entity
-      city_to:
-      - entity: city
-        type: from_entity
+    city_from:
+    - entity: city
+      type: from_entity
+    city_to:
+    - entity: city
+      type: from_entity
 e2e_actions: []
