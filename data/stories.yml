@@ -11,3 +11,16 @@ stories:
   - active_loop: city_form
   - active_loop: null
   - action: utter_info
+  - action: utter_confirm_ticket
+- story: confirm yes
+  steps:
+  - action: utter_confirm_ticket
+  - intent: affirm
+  - action: utter_ok_to_buy
+  - action: action_restart
+- story: confirm no
+  steps:
+  - action: utter_confirm_ticket
+  - intent: deny
+  - action: utter_cancel_to_buy
+  - action: action_restart

@@ -42,18 +42,28 @@ responses:
   utter_iamabot:
   - text: 我是一个演示机器人
   utter_ask_city_form_city_from:
-  - text: 从哪个城市出发？
-  utter__ask_city_form_city_to:
-  - text: 去哪个城市？
+  - text: 请告诉我从哪个城市出发？
+  utter_ask_city_form_city_to:
+  - text: 请告诉我去哪个城市？
   utter_info:
   - text: 当前的情况是买从{city_from}到{city_to}的车票
+  utter_confirm_ticket:
+  - text: 确认购买吗
+  utter_ok_to_buy:
+  - text: 好的我去买票了
+  utter_cancel_to_buy:
+  - text: 我不买了，爱咋咋
 actions: []
 forms:
   city_form:
     city_from:
     - entity: city
       type: from_entity
+    - entity: city_from
+      type: from_entity
     city_to:
     - entity: city
+      type: from_entity
+    - entity: city_to
       type: from_entity
 e2e_actions: []

@@ -32,12 +32,26 @@ nlu:
   examples: |
     - 有车票吗
     - 我要买票
+    - [北京](city_from)到[上海](city_to)的票
     - 我要买从[北京](city_from)到[上海](city_to)的票
+    - 我要买从[上海](city_from)出发的票
+    - 我要买从[纽约](city_from)开车的票
     - 我要买去[上海](city_to)的票
+    - 我要买去[北京](city_to)的票
+    - 我要买去[纽约](city_to)的票
+    - 我要买到[华盛顿](city_to)的票
+    - 我要买到[上海](city_to)的票
     - 我要买从[纽约](city_from)出发的票
+    - [纽约](city_from)出发的票
+    - 到[北京](city_to)的票
 - intent: inform
   examples: |
     - [北京](city)吧
     - 是[上海](city)
     - [纽约](city)
     - [北京](city)
+    - [华盛顿](city)
+    - 去[华盛顿](city_to)
+    - 去[北京](city_to)
+    - 从[华盛顿]出发(city_from)
+    - 从[北京]走(city_from)
