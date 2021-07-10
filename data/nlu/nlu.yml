@@ -1,0 +1,35 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - 你好
+    - 你好啊
+    - hello
+    - hi
+
+- intent: goodbye
+  examples: |
+    - 拜拜
+    - 再见
+    - bye
+
+- intent: affirm
+  examples: |
+    - 好的
+    - 是
+    - 对的
+    - ok
+
+- intent: deny
+  examples: |
+    - 不对
+    - 不行
+    - 不是这样
+    - 错了
+
+- intent: bot_challenge
+  examples: |
+    - 你是谁
+    - 你是机器人吗
+    - 你从哪来
