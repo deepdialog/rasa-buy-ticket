@@ -31,6 +31,7 @@ nlu:
 - intent: buy_ticket
   examples: |
     - 有车票吗
+    - 我要买票
 - intent: inform
   examples: |
     - [北京](city)吧
