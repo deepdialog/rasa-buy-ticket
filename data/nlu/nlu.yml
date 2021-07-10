@@ -1,5 +1,4 @@
 version: "2.0"
-
 nlu:
 - intent: greet
   examples: |
@@ -7,29 +6,33 @@ nlu:
     - 你好啊
     - hello
     - hi
-
 - intent: goodbye
   examples: |
     - 拜拜
     - 再见
     - bye
-
 - intent: affirm
   examples: |
     - 好的
     - 是
     - 对的
     - ok
-
 - intent: deny
   examples: |
     - 不对
     - 不行
     - 不是这样
     - 错了
-
 - intent: bot_challenge
   examples: |
     - 你是谁
     - 你是机器人吗
     - 你从哪来
+- intent: buy_ticket
+  examples: |
+    - 有车票吗
+- intent: inform
+  examples: |
+    - [北京](city)吧
+    - 是[上海](city)
+    - [纽约](city)

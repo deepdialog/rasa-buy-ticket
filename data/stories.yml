@@ -1,8 +1,13 @@
 version: "2.0"
-
 stories:
-
 - story: happy path
   steps:
   - intent: greet
   - action: utter_greet
+- story: buy_ticket
+  steps:
+  - intent: buy_ticket
+  - action: city_form
+  - active_loop: city_form
+  - active_loop: null
+  - action: utter_info

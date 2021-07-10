@@ -1,22 +1,58 @@
-version: "2.0"
-
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - bot_challenge
-
-responses:
-  utter_greet:
-  - text: 你好呀
-
-  utter_goodbye:
-  - text: 再见啦
-
-  utter_iamabot:
-  - text: 我是一个演示机器人
-
+version: '2.0'
+config:
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- buy_ticket:
+    use_entities: true
+- inform:
+    use_entities: true
+entities:
+- city
+slots:
+  city_from:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  city_to:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: 你好呀
+  utter_goodbye:
+  - text: 再见啦
+  utter_iamabot:
+  - text: 我是一个演示机器人
+  utter_ask_city_form_city_from:
+  - text: 从哪个城市出发？
+  utter__ask_city_form_city_to:
+  - text: 去哪个城市？
+  utter_info:
+  - text: 当前的情况是买从{city_from}到{city_to}的车票
+actions: []
+forms:
+  city_form:
+    required_slots:
+      city_from:
+      - entity: city
+        type: from_entity
+      city_to:
+      - entity: city
+        type: from_entity
+e2e_actions: []
