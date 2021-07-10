@@ -21,6 +21,8 @@ intents:
     use_entities: true
 entities:
 - city
+- city_from
+- city_to
 slots:
   city_from:
     type: rasa.shared.core.slots.TextSlot
