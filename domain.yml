@@ -56,14 +56,15 @@ responses:
 actions: []
 forms:
   city_form:
-    city_from:
-    - entity: city
-      type: from_entity
-    - entity: city_from
-      type: from_entity
-    city_to:
-    - entity: city
-      type: from_entity
-    - entity: city_to
-      type: from_entity
+    required_slots:
+      city_from:
+      - entity: city
+        type: from_entity
+      - entity: city_from
+        type: from_entity
+      city_to:
+      - entity: city
+        type: from_entity
+      - entity: city_to
+        type: from_entity
 e2e_actions: []
